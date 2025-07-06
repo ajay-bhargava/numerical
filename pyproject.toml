@@ -1,0 +1,31 @@
+[project]
+name = "numerical"
+version = "0.1.0"
+description = "This is a practice repository (with educational only Cursor help) for practicing writing code."
+readme = "README.md"
+requires-python = ">=3.12"
+authors = [
+    { name = "Ajay Bhargava", email = "bhargava.ajay@gmail.com" }
+]
+dependencies = [
+    "numpy>=2.3.1",
+    "pytest",
+]
+
+[build-system]
+requires = ["setuptools>=42.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["numerical"]
+package-dir = {"numerical" = "src/numerical"}
+
+[tool.ruff]
+src = ["src"]
+line-length = 100
+select = ["E", "F", "B", "I"]
+ignore = ["E501"]
+
+[tool.pytest.ini_options]
+testpaths = ["__test__"]
+addopts = "-ra -q"
