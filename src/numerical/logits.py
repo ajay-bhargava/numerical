@@ -22,7 +22,7 @@ def sigmoid(z):
 
 def logit(X, w, b):
     z = X @ w + b
-    return sigmoid(z) # type: ignore
+    return sigmoid(z)
 
 def loss(y_pred, y_true):
     y_pred = np.clip(y_pred, 1e-10, 1 - 1e-10)
